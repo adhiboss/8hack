@@ -1,0 +1,200 @@
+.community-page {
+  padding: 120px 5% 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 80vh;
+}
+
+.builder-categories {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 80px;
+}
+
+.category-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 20px;
+  background: var(--bg-white);
+  border-radius: 20px;
+  min-width: 130px;
+  border: 1px solid #F1F5F9;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.cat-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.bg-orange { background: var(--pastel-orange); }
+.text-orange { color: var(--accent-orange); }
+
+.category-card span {
+  font-weight: 600;
+  color: var(--primary-navy);
+  font-size: 0.95rem;
+}
+
+.find-teammates-section {
+  background: var(--bg-light);
+  border-radius: 30px;
+  padding: 40px;
+  text-align: center;
+  margin-bottom: 60px;
+  border: 1px solid #E2E8F0;
+}
+
+.find-header h2 {
+  font-family: 'Oswald', 'Inter', sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  color: var(--primary-navy);
+}
+
+.role-filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.role-pill {
+  padding: 10px 25px;
+  border-radius: 30px;
+  background: var(--bg-white);
+  border: 1px solid #E2E8F0;
+  color: #64748B;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.role-pill:hover {
+  border-color: var(--primary-navy);
+  color: var(--primary-navy);
+}
+
+.role-pill.active {
+  background: var(--primary-navy);
+  color: var(--bg-white);
+  border-color: var(--primary-navy);
+}
+
+.find-btn {
+  padding: 14px 32px;
+  border-radius: 30px;
+  background: var(--primary-yellow);
+  color: var(--primary-navy);
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: var(--shadow-accent);
+  transition: transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.find-btn:hover {
+  transform: translateY(-2px);
+}
+
+.builders-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.builder-card {
+  background: var(--bg-white);
+  border-radius: 24px;
+  padding: 30px 20px;
+  text-align: center;
+  border: 1px solid #F1F5F9;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.builder-card:hover {
+  transform: translateY(-5px);
+}
+
+.avatar-wrapper {
+  margin-bottom: 20px;
+}
+
+.builder-avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 4px solid var(--pastel-blue);
+  object-fit: cover;
+}
+
+.builder-card h3 {
+  font-size: 1.3rem;
+  color: var(--primary-navy);
+  margin-bottom: 5px;
+}
+
+.builder-role {
+  font-size: 0.95rem;
+  color: #64748B;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.builder-skills {
+  font-size: 0.85rem;
+  color: #94A3B8;
+  margin-bottom: 25px;
+  background: #F8FAFC;
+  padding: 8px 12px;
+  border-radius: 12px;
+  width: 100%;
+}
+
+.connect-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  background: var(--primary-navy);
+  color: var(--bg-white);
+  border: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.connect-btn:hover {
+  background: #0F172A;
+}

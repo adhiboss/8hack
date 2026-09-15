@@ -1,0 +1,225 @@
+.hackathons-page {
+  padding: 120px 5% 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 80vh;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.page-header h1 {
+  font-family: 'Oswald', 'Inter', sans-serif;
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.page-header p {
+  font-size: 1.2rem;
+  color: var(--text-light);
+}
+
+.search-filter-section {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: var(--bg-white);
+  border: 1px solid #E2E8F0;
+  border-radius: 40px;
+  padding: 15px 25px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.search-bar i {
+  font-size: 1.2rem;
+  color: #94A3B8;
+  margin-right: 15px;
+}
+
+.search-bar input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  font-family: inherit;
+  color: var(--text-dark);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+}
+
+.filter-pill {
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: 1px solid #E2E8F0;
+  background: var(--bg-white);
+  color: var(--text-light);
+  font-weight: 500;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.filter-pill:hover {
+  border-color: var(--primary-navy);
+  color: var(--primary-navy);
+}
+
+.filter-pill.active {
+  background: var(--primary-navy);
+  color: var(--bg-white);
+  border-color: var(--primary-navy);
+}
+
+.hackathons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.hackathon-card {
+  background: var(--bg-white);
+  border-radius: var(--radius-md);
+  padding: 30px;
+  border: 1px solid #F1F5F9;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.hackathon-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.org-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: #F1F5F9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #64748B;
+}
+
+.org-name {
+  font-size: 0.9rem;
+  color: #64748B;
+  font-weight: 600;
+}
+
+.hackathon-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  color: var(--primary-navy);
+}
+
+.tags {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background: #F8FAFC;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #475569;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.card-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  padding-top: 20px;
+  border-top: 1px dashed #E2E8F0;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.detail-label {
+  font-size: 0.8rem;
+  color: #94A3B8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.detail-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--primary-navy);
+}
+
+.detail-value.open { color: var(--accent-green); }
+.detail-value.closed { color: var(--accent-red); }
+
+.explore-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  background: var(--bg-light);
+  color: var(--primary-navy);
+  border: 1px solid #E2E8F0;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.explore-btn:hover {
+  background: var(--primary-yellow);
+  border-color: var(--primary-yellow);
+  transform: translateY(-2px);
+}
+
+.demo-notice {
+  text-align: center;
+  color: #94A3B8;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
