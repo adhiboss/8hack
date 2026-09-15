@@ -151,12 +151,47 @@ export const Home = () => {
               <h3>GROW</h3>
               <p>Build your network</p>
             </div>
-
           </div>
-          
-          <div className="journey-return">
-            <div className="journey-connector-down"><i className="ri-arrow-down-line"></i></div>
-            <p>Find your next challenge</p>
+        </section>
+
+        {/* 4. FOR ORGANIZERS (Devpost Style Split) */}
+        <section className="organizer-section">
+          <div className="organizer-content">
+            <div className="eyebrow">FOR ORGANIZERS</div>
+            <h2>Powering the world's best hackathons.</h2>
+            <p>
+              From registration to project submission and judging, 8Hack provides everything you need to host a successful hackathon and engage with top builders.
+            </p>
+            <ul className="organizer-benefits">
+              <li><i className="ri-check-line"></i> Custom registration flows</li>
+              <li><i className="ri-check-line"></i> Automated team formation</li>
+              <li><i className="ri-check-line"></i> Seamless project submissions</li>
+            </ul>
+            <a href="mailto:hello@8hack.com" className="cta-button primary shadow-accent">
+              Host your hackathon <i className="ri-arrow-right-line"></i>
+            </a>
+          </div>
+          <div className="organizer-visual">
+            <div className="mock-dashboard">
+              <div className="dash-header">
+                <span className="dot bg-red"></span>
+                <span className="dot bg-yellow"></span>
+                <span className="dot bg-green"></span>
+              </div>
+              <div className="dash-body">
+                <div className="dash-stat-row">
+                  <div className="dash-stat">
+                    <span className="stat-value">1,245</span>
+                    <span className="stat-label">Registrations</span>
+                  </div>
+                  <div className="dash-stat">
+                    <span className="stat-value">312</span>
+                    <span className="stat-label">Projects</span>
+                  </div>
+                </div>
+                <div className="dash-chart"></div>
+              </div>
+            </div>
           </div>
         </section>
         

@@ -18,26 +18,40 @@ export const Hackathons = () => {
         <p>Discover hackathons, competitions and innovation opportunities.</p>
       </div>
 
-      <div className="search-filter-section">
-        <div className="search-bar">
-          <i className="ri-search-line"></i>
-          <input type="text" placeholder="Search hackathons, technologies or organizations..." />
-        </div>
+      <div className="hackathons-layout">
+        {/* LEFT SIDEBAR: FILTERS */}
+        <aside className="filters-sidebar">
+          <div className="search-bar">
+            <i className="ri-search-line"></i>
+            <input type="text" placeholder="Search hackathons..." />
+          </div>
 
-        <div className="filters">
-          <button className="filter-pill active">All</button>
-          <button className="filter-pill">Online</button>
-          <button className="filter-pill">Offline</button>
-          <button className="filter-pill">Hybrid</button>
-          
-          <button className="filter-pill dropdown">Technology <i className="ri-arrow-down-s-line"></i></button>
-          <button className="filter-pill dropdown">Location <i className="ri-arrow-down-s-line"></i></button>
-          <button className="filter-pill dropdown">Theme <i className="ri-arrow-down-s-line"></i></button>
-          <button className="filter-pill dropdown">Deadline <i className="ri-arrow-down-s-line"></i></button>
-        </div>
-      </div>
+          <div className="filter-group">
+            <h3>Format</h3>
+            <label className="checkbox-label"><input type="checkbox" /> Online</label>
+            <label className="checkbox-label"><input type="checkbox" /> In-Person</label>
+            <label className="checkbox-label"><input type="checkbox" /> Hybrid</label>
+          </div>
 
-      <div className="hackathons-grid">
+          <div className="filter-group">
+            <h3>Status</h3>
+            <label className="checkbox-label"><input type="checkbox" defaultChecked /> Registration Open</label>
+            <label className="checkbox-label"><input type="checkbox" /> Upcoming</label>
+            <label className="checkbox-label"><input type="checkbox" /> Closed</label>
+          </div>
+
+          <div className="filter-group">
+            <h3>Technology</h3>
+            <label className="checkbox-label"><input type="checkbox" /> AI & Machine Learning</label>
+            <label className="checkbox-label"><input type="checkbox" /> Web3 & Blockchain</label>
+            <label className="checkbox-label"><input type="checkbox" /> AR / VR</label>
+            <label className="checkbox-label"><input type="checkbox" /> Mobile Dev</label>
+          </div>
+        </aside>
+
+        {/* RIGHT CONTENT: GRID */}
+        <div className="hackathons-content">
+          <div className="hackathons-grid">
         {mockHackathons.map((hackathon) => (
           <div key={hackathon.id} className="hackathon-card">
             <div className="card-top">
@@ -72,9 +86,11 @@ export const Hackathons = () => {
             </button>
           </div>
         ))}
-      </div>
-      <div className="demo-notice">
-        <p><i className="ri-information-line"></i> This is sample demo content.</p>
+          </div>
+          <div className="demo-notice">
+            <p><i className="ri-information-line"></i> This is sample demo content.</p>
+          </div>
+        </div>
       </div>
     </div>
   );

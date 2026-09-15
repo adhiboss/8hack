@@ -3,12 +3,12 @@ import './Projects.css';
 
 export const Projects = () => {
   const mockProjects = [
-    { id: 1, title: 'AI Study Assistant', team: 4, stack: ['AI', 'React', 'Python'], img: 'ri-brain-line', color: 'bg-blue', textcolor: 'text-blue' },
-    { id: 2, title: 'DeFi Portfolio Tracker', team: 2, stack: ['Web3', 'Vue', 'Solidity'], img: 'ri-coins-line', color: 'bg-purple', textcolor: 'text-purple' },
-    { id: 3, title: 'Smart Home Hub OS', team: 5, stack: ['Hardware', 'C++', 'IoT'], img: 'ri-home-wifi-line', color: 'bg-green', textcolor: 'text-green' },
-    { id: 4, title: 'MediConnect Portal', team: 3, stack: ['HealthTech', 'Next.js', 'PostgreSQL'], img: 'ri-hospital-line', color: 'bg-red', textcolor: 'text-red' },
-    { id: 5, title: 'Open Source CLI Tool', team: 1, stack: ['Open Source', 'Rust', 'CLI'], img: 'ri-terminal-window-line', color: 'bg-orange', textcolor: 'text-orange' },
-    { id: 6, title: 'Eco-Tracking App', team: 4, stack: ['Mobile', 'React Native', 'Firebase'], img: 'ri-leaf-line', color: 'bg-yellow', textcolor: 'text-yellow' }
+    { id: 1, title: 'AI Study Assistant', tagline: 'Your personal AI tutor that generates quizzes from notes.', event: 'Global AI Hack 2026', likes: 142, stack: ['AI', 'React', 'Python'], img: 'ri-brain-line', color: 'bg-blue', textcolor: 'text-blue' },
+    { id: 2, title: 'DeFi Portfolio Tracker', tagline: 'Track all your web3 assets across 12 chains in one place.', event: 'Web3 Builders Challenge', likes: 89, stack: ['Web3', 'Vue', 'Solidity'], img: 'ri-coins-line', color: 'bg-purple', textcolor: 'text-purple' },
+    { id: 3, title: 'Smart Home Hub OS', tagline: 'Open source operating system for DIY smart homes.', event: 'Hardware Hackathon', likes: 215, stack: ['Hardware', 'C++', 'IoT'], img: 'ri-home-wifi-line', color: 'bg-green', textcolor: 'text-green' },
+    { id: 4, title: 'MediConnect Portal', tagline: 'Secure telemedicine portal for rural areas.', event: 'Health Hack 4.0', likes: 67, stack: ['HealthTech', 'Next.js', 'PostgreSQL'], img: 'ri-hospital-line', color: 'bg-red', textcolor: 'text-red' },
+    { id: 5, title: 'Open Source CLI Tool', tagline: 'A blazing fast CLI tool for managing Docker containers.', event: 'Open Source Sprint', likes: 304, stack: ['Open Source', 'Rust', 'CLI'], img: 'ri-terminal-window-line', color: 'bg-orange', textcolor: 'text-orange' },
+    { id: 6, title: 'Eco-Tracking App', tagline: 'Track and reduce your daily carbon footprint easily.', event: 'Green Energy Ideathon', likes: 112, stack: ['Mobile', 'React Native', 'Firebase'], img: 'ri-leaf-line', color: 'bg-yellow', textcolor: 'text-yellow' }
   ];
 
   return (
@@ -32,24 +32,29 @@ export const Projects = () => {
 
       <div className="projects-grid">
         {mockProjects.map((project) => (
-          <div key={project.id} className="project-card">
-            <div className={`project-image-placeholder ${project.color}`}>
+          <div key={project.id} className="devpost-project-card">
+            <div className={`project-thumbnail ${project.color}`}>
               <i className={`${project.img} ${project.textcolor}`}></i>
             </div>
             
-            <div className="project-info">
+            <div className="project-body">
               <h3>{project.title}</h3>
-              <p className="team-size">Built by {project.team} builders</p>
+              <p className="project-tagline">{project.tagline}</p>
               
-              <div className="project-stack">
-                {project.stack.map(tech => (
-                  <span key={tech} className="tech-tag">{tech}</span>
-                ))}
+              <div className="project-event">
+                <i className="ri-trophy-line"></i> Built at <strong>{project.event}</strong>
               </div>
               
-              <button className="view-project-btn">
-                View Project <i className="ri-arrow-right-line"></i>
-              </button>
+              <div className="project-footer">
+                <div className="project-stack">
+                  {project.stack.map(tech => (
+                    <span key={tech} className="tech-dot" title={tech}></span>
+                  ))}
+                </div>
+                <div className="project-likes">
+                  <i className="ri-thumb-up-line"></i> {project.likes}
+                </div>
+              </div>
             </div>
           </div>
         ))}

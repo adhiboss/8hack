@@ -3,14 +3,12 @@ import './Community.css';
 
 export const Community = () => {
   const mockBuilders = [
-    { id: 1, name: 'Alex M.', role: 'AI Builder', skills: 'Python • PyTorch • RAG', avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026024d' },
-    { id: 2, name: 'Sarah J.', role: 'Frontend Developer', skills: 'React • Three.js • UI/UX', avatar: 'https://i.pravatar.cc/150?u=a04258a2462d826712d' },
-    { id: 3, name: 'David K.', role: 'Backend Engineer', skills: 'Go • PostgreSQL • Docker', avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026704d' },
-    { id: 4, name: 'Emily R.', role: 'Product Designer', skills: 'Figma • User Research', avatar: 'https://i.pravatar.cc/150?u=a04258114e29026702d' },
-    { id: 5, name: 'Michael T.', role: 'Founder', skills: 'Strategy • Marketing • Sales', avatar: 'https://i.pravatar.cc/150?u=a048581f4e29026701d' },
-    { id: 6, name: 'Jessica L.', role: 'Data Scientist', skills: 'SQL • Pandas • ML', avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026023d' },
-    { id: 7, name: 'Ryan P.', role: 'Student', skills: 'Java • C++ • Algorithms', avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026025d' },
-    { id: 8, name: 'Chloe B.', role: 'Creator', skills: 'Video • Copywriting', avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026026d' }
+    { id: 1, name: 'Alex M.', handle: '@alexm', role: 'AI Builder', location: 'San Francisco, CA', skills: ['Python', 'PyTorch', 'RAG'], avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026024d', banner: 'bg-blue' },
+    { id: 2, name: 'Sarah J.', handle: '@sarahj', role: 'Frontend Dev', location: 'London, UK', skills: ['React', 'Three.js', 'UI/UX'], avatar: 'https://i.pravatar.cc/150?u=a04258a2462d826712d', banner: 'bg-purple' },
+    { id: 3, name: 'David K.', handle: '@davidk', role: 'Backend Eng', location: 'Berlin, DE', skills: ['Go', 'Postgres', 'Docker'], avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026704d', banner: 'bg-green' },
+    { id: 4, name: 'Emily R.', handle: '@emilyr', role: 'Product Designer', location: 'Toronto, CA', skills: ['Figma', 'Research'], avatar: 'https://i.pravatar.cc/150?u=a04258114e29026702d', banner: 'bg-orange' },
+    { id: 5, name: 'Michael T.', handle: '@michaelt', role: 'Founder', location: 'Austin, TX', skills: ['Strategy', 'Marketing'], avatar: 'https://i.pravatar.cc/150?u=a048581f4e29026701d', banner: 'bg-red' },
+    { id: 6, name: 'Jessica L.', handle: '@jessical', role: 'Data Scientist', location: 'Remote', skills: ['SQL', 'Pandas', 'ML'], avatar: 'https://i.pravatar.cc/150?u=a042581f4e29026023d', banner: 'bg-yellow' }
   ];
 
   return (
@@ -66,18 +64,29 @@ export const Community = () => {
 
       <div className="builders-grid">
         {mockBuilders.map((builder) => (
-          <div key={builder.id} className="builder-card">
-            <div className="avatar-wrapper">
-              <img src={builder.avatar} alt={builder.name} className="builder-avatar" />
+          <div key={builder.id} className="devfolio-card">
+            <div className={`card-banner ${builder.banner}`}></div>
+            <div className="card-body">
+              <div className="avatar-container">
+                <img src={builder.avatar} alt={builder.name} className="devfolio-avatar" />
+              </div>
+              <div className="builder-identity">
+                <h3>{builder.name}</h3>
+                <span className="builder-handle">{builder.handle}</span>
+              </div>
+              <div className="builder-bio">
+                <p className="role-tag"><i className="ri-briefcase-4-line"></i> {builder.role}</p>
+                <p className="location-tag"><i className="ri-map-pin-line"></i> {builder.location}</p>
+              </div>
+              <div className="devfolio-skills">
+                {builder.skills.map(skill => (
+                  <span key={skill} className="skill-pill">{skill}</span>
+                ))}
+              </div>
+              <button className="connect-btn">
+                Connect <i className="ri-user-add-line"></i>
+              </button>
             </div>
-            <h3>{builder.name}</h3>
-            <p className="builder-role">{builder.role}</p>
-            <div className="builder-skills">
-              {builder.skills}
-            </div>
-            <button className="connect-btn">
-              Connect <i className="ri-user-add-line"></i>
-            </button>
           </div>
         ))}
       </div>
